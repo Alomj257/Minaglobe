@@ -1,10 +1,10 @@
-Hoolix - Smart Ideas for your Brand are Here
+Minaglobe - Smart Ideas for your Brand are Here
 
 
 
 #---------- HEADER ----------#
 
-Hoolix
+Minaglobe
 
 aria-label = close menu
 
@@ -150,7 +150,7 @@ Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed vari
 
 #---------- FOOTER ----------#
 
-Hoolix
+Minaglobe
 
 Lorem ipsum dolor sit amet consecte tur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
 
@@ -185,14 +185,14 @@ Contact Us
 +7894631546876
 
 <ion-icon name="mail" aria-hidden="true"></ion-icon>
-info@hoolix.com
+info@minaglobe.com
 
 <ion-icon name="logo-facebook"></ion-icon>
 <ion-icon name="logo-twitter"></ion-icon>
 <ion-icon name="logo-instagram"></ion-icon>
 <ion-icon name="logo-pinterest"></ion-icon>
 
-&copy; 2022 Hoolix | All Rights Reserved by codewithsadee
+&copy; 2022 Minaglobe | All Rights Reserved by Minaglobe Innovations
 
 Privacy Policy
 Terms of Use
