@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MinaGlobe Innovations</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+
+  <style>
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      /* Increased gap for better spacing */
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 1rem;
+      width: 100%;
+      /* Ensure full width */
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      /* Make inputs full width */
+      box-sizing: border-box;
+      /* Include padding in width */
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #28AF60;
+      outline: none;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .contact-form {
+        padding: 0.5rem;
+        /* Less padding on smaller screens */
+      }
+
+      .form-group input,
+      .form-group textarea {
+        font-size: 14px;
+        /* Smaller font size on mobile */
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .form-group input,
+      .form-group textarea {
+        padding: 0.5rem;
+        /* Adjust padding for mobile */
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        /* Adjust title size for mobile */
+      }
+    }
+
+
+    /* PORTFOLIO */
+
+
+    .portfolio {
+      padding: 2rem 0;
+      margin-top: 2rem;
+      /* Add margin to the top of the entire portfolio section */
+    }
+
+    .portfolio-title {
+      text-align: center;
+      /* Center the title */
+      font-size: 2rem !important;
+      /* Increase font size for emphasis */
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* Two columns */
+      gap: 1.5rem;
+      /* Space between items */
+    }
+
+    .portfolio-item {
+      background-color: white;
+      /* Light background for items */
+      border-radius: 15px;
+      overflow: hidden;
+      /* Prevent overflow */
+      /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+      transition: transform 0.3s;
+      /* Smooth hover effect */
+      padding: 1.5rem;
+      /* Increased padding */
+      max-width: 500px;
+      /* Set a maximum width to make the boxes larger */
+      margin: auto;
+      /* Center the boxes */
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      /* Lift effect on hover */
+    }
+
+    .portfolio-item img {
+      width: 80%;
+      /* Smaller width for images */
+      height: auto;
+      /* Maintain aspect ratio */
+      object-fit: contain;
+      /* Ensure the entire image is visible */
+      margin: 0 auto;
+      /* Center the image */
+      display: block;
+      /* Center block element */
+    }
+
+    .portfolio-info {
+      text-align: center;
+      margin-top: 1rem;
+      /* Add space above text area */
+    }
+
+    .portfolio-title {
+      font-size: 1.2rem;
+      /* Slightly larger title */
+      margin: 0.5rem 0;
+      /* Adjust margins */
+    }
+
+    .portfolio-description {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .read-more {
+      display: inline-flex;
+      /* Flexbox for alignment */
+      align-items: center;
+      /* Center vertically */
+      color: #28AF60;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .read-more ion-icon {
+      margin-left: 0.5rem;
+      /* Space between text and icon */
+    }
+
+    .read-more:hover {
+      color: #1a7a3d;
+      /* Darker green on hover */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .portfolio-title {
+        font-size: 1.1rem;
+        /* Smaller title size */
+      }
+
+      .portfolio-description {
+        font-size: 0.8rem;
+        /* Smaller description */
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        /* Stack in one column */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .portfolio-title {
+        font-size: 0.9rem;
+        /* Adjust for smaller screens */
+      }
+
+      .portfolio-description {
+        font-size: 0.75rem;
+        /* Smaller description for mobile */
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">MinaGlobe</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">MinaGlobe</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="#services" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li>
+            <a href="#features" class="navbar-link" data-nav-link>Features</a>
+          </li>
+
+          <li>
+            <a href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="https://wa.me/916291869049" class="btn-outline">Lets talk</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle has-before">Wellcome to MinaGlobe Innovations</p>
+
+            <h1 class="h1 hero-title">Smart Ideas for your Brand are Here</h1>
+
+            <p class="hero-text">
+              At Minaglobe Innovations, we’re passionate about turning your visionary ideas into transformative digital
+              solutions. Specializing in website development, software, and mobile applications, we craft exceptional
+              products that harmoniously blend captivating design with robust functionality. Let us elevate your vision
+              and create impactful experiences together!
+            </p>
+
+            <div class="btn-group">
+              <a href="#services" class="btn btn-primary">Discover More</a>
+
+              <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="play" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">How it works</span>
+              </button>
+            </div>
+
+          </div>
+
+          <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
+            <img src="./assets/images/hero-banner.png" width="650" height="650" alt="hero banner" class="img-cover">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="802" height="654" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <h2 class="h2-sm section-title">We craft websites, apps, and software to realize your vision.</h2>
+
+            <p class="section-text">
+              <b style="color: #28AF60;">Minaglobe Innovations</b> is your go-to partner for digital transformation,
+              specializing in stunning websites, mobile apps, and custom software solutions. We turn your ideas into
+              reality, helping you stand out in the digital world.
+            </p>
+            <p class="section-text">
+              <b style="color: black">Why Choose Minaglobe Innovations?</b>
+            </p>
+
+            <ul class="about-list">
+
+              <li class="has-before">
+                Customized to match your unique vision.
+              </li>
+
+              <li class="has-before">
+                Striking visuals that engage and convert users.
+              </li>
+
+              <li class="has-before">
+                Dedicated assistance for your ongoing success.
+              </li>
+
+            </ul>
+
+            <div class="btn-group">
+              <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="star-outline" aria-hidden="true"></ion-icon> <!-- Changed to star-outline -->
+                </div>
+                <span class="span">Top Quality Service</span>
+              </button>
+
+              <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="medal-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">2+ Years Experience</span>
+              </button>
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="services" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle text-center">-What MinaGlobe Offer-</p>
+
+          <h2 class="h2 section-title text-center">Our Creative Services</h2>
+
+          <p class="section-text text-center">
+            Reduce operating costs and enhance efficiency with our <b style="color: #28AF60;">web</b>, <b
+              style="color: #28AF60;">app</b>, and <b style="color: #28AF60;">software
+            </b> development solutions, all
+            crafted for exceptional user experiences.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card has-after">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-1.png" width="140" height="140" loading="lazy"
+                    alt=">Website Development" class="img">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: #28AF60;">Website Development</h3>
+
+                  <p class="card-text">
+                    Enhance your digital presence with our custom website development services, featuring beautiful
+                    designs and smooth functionality that engage and convert users.
+                  </p>
+
+                  <a href="https://wa.me/916291869049" class="btn-link" target="_blank" style="color: #28AF60;">
+                    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+                    <span class="span">Contact us.</span>
+                  </a>
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-2.png" width="140" height="140" loading="lazy" alt="App Development"
+                    class="img">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: #28AF60;">App Development</h3>
+
+                  <p class="card-text">
+                    Bring your ideas to life with our bespoke app development services. We create user-friendly mobile
+                    applications designed to engage your audience and elevate your brand.
+                  </p>
+
+                  <a href="https://wa.me/916291869049" class="btn-link" target="_blank" style="color: #28AF60;">
+                    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+                    <span class="span">Contact us.</span>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-3.png" width="140" height="140" loading="lazy"
+                    alt="Software Development" class="img">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: #28AF60;">Software Development</h3>
+
+                  <p class="card-text">
+                    Optimize your operations with our custom software solutions, delivering robust and scalable
+                    applications tailored to your business needs.
+                  </p>
+
+                  <a href="https://wa.me/916291869049" class="btn-link" target="_blank" style="color: #28AF60;">
+                    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+                    <span class="span">Contact us.</span>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card has-after">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-4.png" width="140" height="140" loading="lazy"
+                    alt="Automation & ETL Service" class="img">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: #28AF60;">Automation & ETL Service</h3>
+
+                  <p class="card-text">
+                    Enhance efficiency with our Automation and ETL services, designed to streamline data processes and
+                    improve workflows, enabling smarter decision-making.
+                  </p>
+
+                  <a href="https://wa.me/916291869049" class="btn-link" target="_blank" style="color: #28AF60;">
+                    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+                    <span class="span">Contact us.</span>
+                  </a>
+
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="https://www.facebook.com/profile.php?id=61558789105587&mibextid=kFxxJD"
+            class="btn btn-primary">Facebook</a>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features" id="features" aria-label="features">
+        <div class="container">
+
+          <p class="section-subtitle text-center">-Why Choose MinaGlobe-</p>
+
+          <h2 class="h2 section-title text-center">Reasons to Choose Us</h2>
+
+          <p class="section-text text-center">
+            Maximize your team’s efficiency and reduce operating costs while achieving outstanding web, app, and
+            software solutions.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="01">01</data>
+
+                <h3 class="h3 card-title">Tailored Solutions</h3>
+
+                <p class="card-text">
+                  Custom strategies designed to meet your unique business needs.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="02">02</data>
+
+                <h3 class="h3 card-title">Dedicated Support</h3>
+
+                <p class="card-text">
+                  Receive ongoing assistance to ensure your success.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="03">03</data>
+
+                <h3 class="h3 card-title">Expert Team</h3>
+
+                <p class="card-text">
+                  Skilled professionals committed to your project.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="04">04</data>
+
+                <h3 class="h3 card-title">Cutting-Edge Technology</h3>
+
+                <p class="card-text">
+                  Utilize the latest tools and technologies for top-notch solutions.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="05">05</data>
+
+                <h3 class="h3 card-title">Seamless Integration</h3>
+
+                <p class="card-text">
+                  Ensure smooth integration with existing systems and workflows.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <data class="card-number" value="06">06</data>
+
+                <h3 class="h3 card-title">Competitive Pricing</h3>
+
+                <p class="card-text">
+                  Get premium services at reasonable prices without compromising quality.
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+      <!-- 
+  - #PORTFOLIO
+-->
+
+      <section class="section portfolio" id="portfolio" aria-label="portfolio">
+        <div class="container">
+          <p class="section-subtitle text-center">- MinaGlobe's works -</p>
+          <h2 class="h2 section-title text-center">Recent Projects</h2>
+          <p class="section-text text-center" style="margin-bottom: 20px;">
+            Here are some of our recent works that reflect our expertise and creativity.
+          </p>
+
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <img src="./assets/images/project1.png" alt="Project 1" loading="lazy" />
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">Healthcare Management System</h3>
+                <p class="portfolio-description">An all-in-one solution for doctors to manage patient scheduling and records, improving efficiency and patient care.</p>
+                <a href="https://geniusdox.in/" class="read-more">Read More <ion-icon name="arrow-forward"></ion-icon></a>
+              </div>
+            </div>
+
+            <div class="portfolio-item">
+              <img src="./assets/images/project2.png" alt="Project 2" loading="lazy" />
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">Investment Portfolio Management</h3>
+                <p class="portfolio-description">A platform to help clients track and optimize investments, supporting informed decisions and better returns.</p>
+                <a href="http://93.127.163.214/login" class="read-more">Read More <ion-icon name="arrow-forward"></ion-icon></a>
+              </div>
+            </div>
+
+            <div class="portfolio-item">
+              <img src="./assets/images/project3.png" alt="Project 3" loading="lazy" />
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">Truck Service Workshop & Management</h3>
+                <p class="portfolio-description">A system for workshops to manage service schedules, inventory, and repair histories, boosting productivity and client satisfaction.</p>
+                <a href="https://dam-mis.onrender.com/" class="read-more">Read More <ion-icon name="arrow-forward"></ion-icon></a>
+              </div>
+            </div>
+
+            <div class="portfolio-item">
+              <img src="./assets/images/project4.png" alt="Project 4" loading="lazy" />
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">Educational Platform</h3>
+                <p class="portfolio-description">An interactive platform for managing courses, tracking students, and improving learning outcomes.</p>
+                <a href="https://muslim-connect.onrender.com" class="read-more">Read More <ion-icon name="arrow-forward"></ion-icon></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #FAQ
+      -->
+
+      <section class="section faq" id="faq" aria-label="frequently asked questions">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Discover Frequently Asked Questions?</h2>
+
+            <a href="#contact" class="btn btn-primary">Work Together</a>
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    01. What services does MinaGlobe Innovations offer?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    MinaGlobe Innovations specializes in website development, app development, and software solutions.
+                    We craft exceptional digital products that blend captivating design with robust functionality,
+                    tailored to meet your business needs.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    02. How long does it take to complete a project?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    The timeline for project completion varies based on the complexity and scope of the work. Typically,
+                    a standard website or app development project can take anywhere from a few weeks to a few months. We
+                    provide a detailed timeline during the initial consultation.
+
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    03. Can you work with existing websites or applications?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    Yes! We can enhance and upgrade existing websites or applications. Our team conducts a thorough
+                    analysis to identify areas for improvement and provides recommendations to optimize performance and
+                    user experience.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    04. What is your approach to user experience (UX) design?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    Our UX design process involves understanding user needs and behaviors through research and testing.
+                    We employ techniques like user interviews, usability testing, and iterative design to ensure that
+                    the final product meets user expectations and provides an engaging experience.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="faq-card">
+
+                <button class="card-action" data-accordion-action>
+                  <h3 class="h3 card-title">
+                    05. How do you ensure the security of my project?
+                  </h3>
+
+                  <div class="action-icon">
+                    <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
+                    <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
+                  </div>
+                </button>
+
+                <div class="card-content">
+                  <p>
+                    We prioritize security by implementing industry best practices and standards throughout the
+                    development process. This includes using secure coding techniques, regular security audits, and
+                    ongoing support to safeguard your website or application from vulnerabilities.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+  - #CONTACT
+-->
+
+  <section class="section contact" id="contact" aria-label="contact">
+    <div class="container">
+      <p class="section-subtitle text-center">- Get in Touch -</p>
+      <h2 class="h2 section-title text-center">Contact Us</h2>
+      <p class="section-text text-center">
+        We would love to hear from you! Please fill out the form below to reach out.
+      </p>
+
+      <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xjkvgaaj">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">MinaGlobe</a>
+
+          <p class="footer-text">
+            Minaglobe Innovations - Empowering Your Vision Through Digital Excellence..
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+
+            <button type="submit" class="form-btn">
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="#services" class="footer-link">Website Development</a>
+          </li>
+
+          <li>
+            <a href="#services" class="footer-link">App Development</a>
+          </li>
+
+          <li>
+            <a href="#services" class="footer-link">Software Development</a>
+          </li>
+
+          <li>
+            <a href="#services" class="footer-link">Automation & ETL</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="#about" class="footer-link">About Company</a>
+          </li>
+
+          <li>
+            <a href="#services" class="footer-link">Our Services</a>
+          </li>
+
+          <li>
+            <a href="#portfolio" class="footer-link">Our Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="location" aria-hidden="true"></ion-icon>
+
+            <address class="contact-link address">
+              Newtown. Kolkata, West Bengal, India 700135
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+            <a href="tel:+916291869049" class="contact-link">+91 6291869049</a>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+
+            <a href="mailto:minaglobeinnovations@gmail.com" class="contact-link">minaglobeinnovations@gmail.com</a>
+          </li>
+
+          <li class="footer-item">
+            <ul class="social-list">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61558789105587&mibextid=kFxxJD" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/minaglobe_innovations?igsh=NHd6NTg1ZnhjZWgx" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/minaglobe-innovations/" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/916291869049" class="social-link">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 MinaGlobe | All Rights Reserved by <a href="#" class="copyright-link">MinaGlobe Innovations</a>
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#privacy" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#terms" class="footer-bottom-link">Terms of Use</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
